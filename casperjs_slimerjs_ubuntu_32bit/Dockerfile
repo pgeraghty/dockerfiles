@@ -37,4 +37,5 @@ RUN \
   apt-get clean all
 
 # Default command
-ENTRYPOINT ["/usr/bin/casperjs"]
+ENTRYPOINT ["casperjs", "--engine=slimerjs"]
+CMD ["--help"]
