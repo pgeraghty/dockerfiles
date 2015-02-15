@@ -10,5 +10,8 @@ Subsequent runs yield normal results.
 
 ## Usage
 ```
-docker run -i -t --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $HOME/.Xauthority:/root/.Xauthority --net=host pgeraghty/slimerjs_ubuntu_32bit
+docker run --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $HOME/.Xauthority:/root/.Xauthority --net=host pgeraghty/slimerjs_ubuntu_32bit --version
+```
+```
+docker run -i -t --rm --entrypoint=bash -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $HOME/.Xauthority:/root/.Xauthority --net=host pgeraghty/slimerjs_ubuntu_32bit
 ```
