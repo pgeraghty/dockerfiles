@@ -56,7 +56,7 @@ RUN apt-get install -y --no-install-recommends \
 
 ENV RUBY_MAJOR 2.2
 ENV RUBY_VERSION 2.2.3
-ENV RUBY_DOWNLOAD_SHA256 5a4de38068eca8919cb087d338c0c2e3d72c9382c804fb27ab746e6c7819ab28
+ENV RUBY_DOWNLOAD_SHA256 df795f2f99860745a416092a4004b016ccf77e8b82dec956b120f18bdc71edce
 
 # some of ruby's build scripts are written in ruby
 # we purge this later to make sure our final image uses what we just built
