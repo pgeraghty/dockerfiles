@@ -11,7 +11,7 @@ ENV CASPERJS_VERSION_F 1.1-beta3
 RUN \
   apt-get update && \
   apt-get upgrade -y && \
-  apt-get install -y libfreetype6-dev libfontconfig1-dev wget bzip2 python && \
+  apt-get install -y libfreetype6-dev libfontconfig1-dev wget bzip2 unzip python && \
 
   mkdir -p /srv/var && \
 
@@ -20,8 +20,8 @@ RUN \
   tar -xjf /tmp/phantomjs-$PHANTOMJS_VERSION_F-linux-i686.tar.bz2 -C /tmp && \
   rm -f /tmp/phantomjs-$PHANTOMJS_VERSION_F-linux-i686.tar.bz2 && \
 
-  mv /tmp/phantomjs-$PHANTOMJS_VERSION_F/ /srv/var/phantomjs && \
-  ln -s /srv/var/phantomjs/phantomjs /usr/bin/phantomjs && \
+  mv /tmp/phantomjs-$PHANTOMJS_VERSION_F*/ /srv/var/phantomjs && \
+  ln -s /srv/var/phantomjs/bin/phantomjs /usr/bin/phantomjs && \
 
   # download and install CasperJS
   wget -O /tmp/casperjs-$CASPERJS_VERSION_F https://github.com/n1k0/casperjs/zipball/$CASPERJS_VERSION_F && \
