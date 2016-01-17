@@ -4,7 +4,6 @@
 
 FROM daald/ubuntu32:trusty
 
-# Env
 ENV SLIMERJS_VERSION_F 0.9.5
 
 # Commands

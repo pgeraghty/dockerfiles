@@ -4,8 +4,8 @@
 
 FROM daald/ubuntu32:trusty
 
-# Env
 ENV PHANTOMJS_VERSION_F 2.0.0
+ENV CASPERJS_VERSION_F 1.1-beta3
 
 # Commands
 RUN \
