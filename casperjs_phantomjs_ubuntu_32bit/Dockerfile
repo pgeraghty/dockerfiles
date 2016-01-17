@@ -28,7 +28,7 @@ RUN \
   unzip /tmp/casperjs-$CASPERJS_VERSION_F -d /tmp && \
   rm -f /tmp/casperjs-$CASPERJS_VERSION_F && \
 
-  mv /tmp/n1k0-casperjs-4f105a9/ /srv/var/casperjs && \
+  mv /tmp/n1k0-casperjs-*/ /srv/var/casperjs && \
   ln -s /srv/var/casperjs/bin/casperjs /usr/bin/casperjs && \
 
   # clean up
