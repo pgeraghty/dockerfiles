@@ -2,7 +2,7 @@
 
 # VERSION 1.0.0
 
-FROM intersoftlab/ubuntu:14.04-i386
+FROM daald/ubuntu32:trusty
 
 # Env
 ENV PHANTOMJS_VERSION_F 2.0.0

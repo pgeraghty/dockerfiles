@@ -1,11 +1,8 @@
-# dockerhub - A repository for various dockerfiles
-# For more information; http://github.com/cmfatih/dockerhub
-#
-# CasperJS
+# CasperJS using SlimerJS
 
 # VERSION 1.0.0
 
-FROM intersoftlab/ubuntu:14.04-i386
+FROM daald/ubuntu32:trusty
 
 # Env
 ENV SLIMERJS_VERSION_F 0.9.5
