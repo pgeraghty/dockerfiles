@@ -38,7 +38,7 @@ RUN \
   ln -s /srv/var/phantomjs/bin/phantomjs /usr/bin/phantomjs && \
 
   # download and install CasperJS
-  wget -O /tmp/casperjs-$CASPERJS_VERSION_F https://github.com/n1k0/casperjs/zipball/$CASPERJS_VERSION_F && \
+  wget --no-check-certificate -O /tmp/casperjs-$CASPERJS_VERSION_F https://github.com/n1k0/casperjs/zipball/$CASPERJS_VERSION_F && \
   unzip /tmp/casperjs-$CASPERJS_VERSION_F -d /tmp && \
   rm -f /tmp/casperjs-$CASPERJS_VERSION_F && \
 
