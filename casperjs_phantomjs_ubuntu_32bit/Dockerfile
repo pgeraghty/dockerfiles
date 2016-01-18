@@ -7,10 +7,24 @@ FROM daald/ubuntu32:trusty
 ENV PHANTOMJS_VERSION_F 1.9.8
 ENV CASPERJS_VERSION_F 1.1-beta3
 
-# Commands
+ENV LANGUAGE=en_US.UTF-8
+ENV LANG=en_US.UTF-8
+ENV LC_ALL=en_US.UTF-8
+
 RUN \
   apt-get update && \
-  apt-get upgrade -y && \
+  apt-get upgrade -y
+
+# Configure locales
+RUN locale-gen en_US.UTF-8
+
+# Set default locale for the environment
+ENV LC_ALL C.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8
+
+# Commands
+RUN \
   apt-get install -y libfreetype6-dev libfontconfig1-dev wget bzip2 unzip python && \
 
   mkdir -p /srv/var && \
