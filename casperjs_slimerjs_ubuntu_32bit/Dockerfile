@@ -6,7 +6,15 @@ FROM daald/ubuntu32:trusty
 
 ENV SLIMERJS_VERSION_F 0.9.5
 
-# Commands
+# Configure locales
+RUN locale-gen en_US.UTF-8
+
+# Set default locale for the environment
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
+ENV LC_ALL en_US.UTF-8
+
+
 RUN \
   apt-get update && \
   apt-get upgrade -y && \

@@ -15,13 +15,13 @@ RUN \
 RUN locale-gen en_US.UTF-8
 
 # Set default locale for the environment
-ENV LC_ALL C.UTF-8
 ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US.UTF-8
+ENV LANGUAGE en_US:en
+ENV LC_ALL en_US.UTF-8
 
-# Commands
+
 RUN \
-  apt-get install -y libfreetype6-dev libfontconfig1-dev libxfont1 wget bzip2 unzip python && \
+  apt-get install -y libfreetype6-dev libfontconfig1-dev wget bzip2 unzip python && \
 
   mkdir -p /srv/var && \
 
