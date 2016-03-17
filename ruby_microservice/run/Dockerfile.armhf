@@ -1,0 +1,8 @@
+# docker build -f Dockerfile.armhf -t pgeraghty/ruby-microservice-run:armhf-edge .
+FROM multiarch/alpine:armhf-edge
+
+RUN apk update && apk upgrade \
+    && apk add ca-certificates \
+    libxml2 libxslt libevent libffi glib ncurses readline \
+    openssl yaml zlib curl mariadb-libs libpq ruby ruby-io-console \
+    && rm -rf /var/cache/apk/*

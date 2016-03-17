@@ -1,0 +1,12 @@
+# ruby-microservice-build:x86_64-edge
+FROM pgeraghty/ruby-microservice-run:x86_64-edge
+
+ENV RAILS_ENV=production
+ENV RACK_ENV=production
+
+RUN apk update && apk upgrade \
+    && apk add git make openssl-dev libssl1.0 build-base libxml2-dev \
+    libxslt-dev libbz2 libevent-dev libffi-dev glib-dev ncurses-dev \
+    readline-dev yaml-dev zlib-dev libpq sqlite-dev mariadb-libs postgresql-dev \
+    ruby-dev ruby-bundler \
+    && rm -rf /var/cache/apk/*

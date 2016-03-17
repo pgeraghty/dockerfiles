@@ -1,0 +1,8 @@
+# # docker build -f Dockerfile.x86 -t pgeraghty/ruby-microservice-run:x86-edge .
+FROM multiarch/alpine:x86-edge
+
+RUN apk update && apk upgrade \
+    && apk add ca-certificates \
+    libxml2 libxslt libevent libffi glib ncurses readline \
+    openssl yaml zlib curl  mariadb-libs libpq ruby ruby-io-console \
+    && rm -rf /var/cache/apk/*
